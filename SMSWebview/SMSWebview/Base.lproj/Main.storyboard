@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVv-jg-4lD">
+                                <rect key="frame" x="0.0" y="50" width="600" height="500"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JPB-JI-hPY"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sS3-la-wBH">
+                                <rect key="frame" x="238" y="562" width="124" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kle-zP-L81"/>
+                                    <constraint firstAttribute="width" constant="124" id="q3h-5i-Ika"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="FIRE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fireAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MzC-LY-mnk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sS3-la-wBH" secondAttribute="bottom" constant="8" id="IeA-da-MIY"/>
+                            <constraint firstAttribute="trailing" secondItem="fVv-jg-4lD" secondAttribute="trailing" id="NNg-8J-4Mu"/>
+                            <constraint firstItem="sS3-la-wBH" firstAttribute="top" secondItem="fVv-jg-4lD" secondAttribute="bottom" constant="12" id="NeP-dL-sEP"/>
+                            <constraint firstItem="fVv-jg-4lD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZW9-8Y-RRZ"/>
+                            <constraint firstItem="fVv-jg-4lD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="lQS-Cb-Tmn"/>
+                            <constraint firstItem="sS3-la-wBH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ulY-fG-dbZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="fVv-jg-4lD" id="dhw-11-D1t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="339"/>
+        </scene>
+    </scenes>
+</document>
