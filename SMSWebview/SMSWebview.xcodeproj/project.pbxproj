@@ -15,6 +15,7 @@
 		0F245C571D4C7279003D0E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F245C551D4C7279003D0E54 /* LaunchScreen.storyboard */; };
 		0F245C621D4C7A0D003D0E54 /* test_sms_and.html in Resources */ = {isa = PBXBuildFile; fileRef = 0F245C601D4C7A0D003D0E54 /* test_sms_and.html */; };
 		0F245C631D4C7A0D003D0E54 /* test_sms_semi_colon.html in Resources */ = {isa = PBXBuildFile; fileRef = 0F245C611D4C7A0D003D0E54 /* test_sms_semi_colon.html */; };
+		0FD3729F1D4F058800D20506 /* test_sms_semi_colon_no_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 0FD3729E1D4F058800D20506 /* test_sms_semi_colon_no_contact.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0F245C581D4C7279003D0E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F245C601D4C7A0D003D0E54 /* test_sms_and.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test_sms_and.html; sourceTree = "<group>"; };
 		0F245C611D4C7A0D003D0E54 /* test_sms_semi_colon.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test_sms_semi_colon.html; sourceTree = "<group>"; };
+		0FD3729E1D4F058800D20506 /* test_sms_semi_colon_no_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test_sms_semi_colon_no_contact.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		0F245C461D4C7279003D0E54 /* SMSWebview */ = {
 			isa = PBXGroup;
 			children = (
+				0FD3729E1D4F058800D20506 /* test_sms_semi_colon_no_contact.html */,
 				0F245C601D4C7A0D003D0E54 /* test_sms_and.html */,
 				0F245C611D4C7A0D003D0E54 /* test_sms_semi_colon.html */,
 				0F245C4A1D4C7279003D0E54 /* AppDelegate.h */,
@@ -146,6 +149,7 @@
 				0F245C631D4C7A0D003D0E54 /* test_sms_semi_colon.html in Resources */,
 				0F245C571D4C7279003D0E54 /* LaunchScreen.storyboard in Resources */,
 				0F245C541D4C7279003D0E54 /* Assets.xcassets in Resources */,
+				0FD3729F1D4F058800D20506 /* test_sms_semi_colon_no_contact.html in Resources */,
 				0F245C521D4C7279003D0E54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

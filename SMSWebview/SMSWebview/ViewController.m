@@ -25,6 +25,9 @@
     if (index == 1) {
         version = @"_semi_colon";
     }
+    if (index == 2) {
+        version = @"_semi_colon_no_contact";
+    }
     NSString *htmlFile = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"test_sms%@",version] ofType:@"html"];
     NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     [self.webview loadHTMLString:htmlString baseURL: [[NSBundle mainBundle] bundleURL]];
@@ -32,8 +35,9 @@
 
 - (IBAction)fireAction:(id)sender {
     UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"CHOOSE VERSION" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
-                            @"Version: &",
-                            @"Version: ;",
+                            @"iOS 8+9 &",
+                            @"iOS 7 ; IN CONTACT",
+                            @"iOS 7 ; NOT IN CONTACT",
                             nil];
     [popup showInView:self.view];
 }
@@ -41,10 +45,9 @@
 - (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0:
-            [self loadHTMLWith:0];
-            break;
         case 1:
-            [self loadHTMLWith:1];
+        case 2:
+            [self loadHTMLWith:(int)buttonIndex];
             break;
         default:
             break;
