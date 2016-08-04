@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <UIActionSheetDelegate>
+@interface ViewController () <UIActionSheetDelegate, UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
 
@@ -52,6 +52,17 @@
         default:
             break;
     }
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    if ([request.URL.absoluteString rangeOfString:@"sms:"].location != NSNotFound) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:request.URL.absoluteString]];
+        return NO;
+    }
+    return YES;
 }
 
 @end
